@@ -322,45 +322,7 @@ GET          /api/sourcing/tasks/count/{userId}
 GET          /api/sourcing/notifications/{userId}
 ```
 
-## LVGL 无人超市 UI 导出包
-
-后端目录下附带：
-
-```text
-ecomerce-backend-1.0.0.1/lvgl_unmanned_store_squareline_export
-```
-
-功能包括：
-
-- 登录页：点击登录进入主界面。
-- 首页：展示商品卡片，支持加入购物车。
-- 购物车：展示商品、数量和合计金额。
-- 支付页：点击结算后模拟支付完成，并清空购物车返回首页。
-
-接入 LVGL 工程时，把 `ui` 目录复制到目标工程，并把以下文件加入编译：
-
-```text
-ui/ui.c
-ui/ui_helpers.c
-ui/ui_events.c
-ui/screens/ui_login.c
-ui/screens/ui_main.c
-ui/screens/ui_cart.c
-ui/screens/ui_pay.c
-ui/static/ui_font_notosanssc_16.c
-ui/static/ui_font_notosanssc_20.c
-ui/static/ui_font_notosanssc_26.c
-```
-
-初始化示例：
-
-```c
-#include "ui/ui.h"
-
-ui_init();
-```
-
-## 部署说明
+## 说明
 
 前端生产构建后会生成 `dist` 目录，可以配合 Nginx 部署。示例配置位于：
 
@@ -408,29 +370,6 @@ ecomerce-frontend-1.0.0.1/vite.config.js
 1. 是否导入完整演示 SQL。
 2. 后端是否连接到正确的 `e_commerce_system` 数据库。
 3. 当前账号角色是否拥有对应模块权限。
-
-## GitHub 上传建议
-
-建议把后端和前端放在同一个仓库根目录中：
-
-```text
-ecommerce-supply-chain/
-├─ ecomerce-backend-1.0.0.1
-├─ ecomerce-frontend-1.0.0.1
-└─ README.md
-```
-
-上传前建议忽略以下目录：
-
-```gitignore
-target/
-node_modules/
-dist/
-.idea/
-.npm-cache/
-.playwright-cli/
-*.zip
-```
 
 ## License
 
