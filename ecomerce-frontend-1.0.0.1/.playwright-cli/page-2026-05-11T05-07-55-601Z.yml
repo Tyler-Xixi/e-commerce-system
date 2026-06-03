@@ -1,0 +1,48 @@
+- main [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: SC
+      - heading "电商供应链一体化平台" [level=1] [ref=e7]
+      - paragraph [ref=e8]: 面向品类工程师、品类组长、采购处长、供应商和仓储调度员的协同系统。 前端直接调用 Spring Boot API，数据落在 MySQL 的供应链业务表。
+      - generic [ref=e9]:
+        - generic [ref=e10]: 需求
+        - generic [ref=e11]: 审核
+        - generic [ref=e12]: RFQ
+        - generic [ref=e13]: 报价
+        - generic [ref=e14]: 定点
+        - generic [ref=e15]: 履约
+    - generic [ref=e16]:
+      - generic [ref=e18]:
+        - heading "账号登录" [level=2] [ref=e19]
+        - paragraph [ref=e20]: 正在检测后端接口...
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e26]:
+            - img [ref=e29]
+            - textbox "用户名" [ref=e31]: engineer
+          - generic [ref=e35]:
+            - img [ref=e38]
+            - textbox "密码：123456" [ref=e41]: "123456"
+            - img [ref=e44] [cursor=pointer]
+          - button "登录平台" [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: 登录平台
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: 演示角色
+          - button "品类工程师 engineer" [ref=e51] [cursor=pointer]:
+            - strong [ref=e52]: 品类工程师
+            - generic [ref=e53]: engineer
+          - button "品类组长 leader" [ref=e54] [cursor=pointer]:
+            - strong [ref=e55]: 品类组长
+            - generic [ref=e56]: leader
+          - button "采购处长 director" [ref=e57] [cursor=pointer]:
+            - strong [ref=e58]: 采购处长
+            - generic [ref=e59]: director
+          - button "供应商操作员 supplier" [ref=e60] [cursor=pointer]:
+            - strong [ref=e61]: 供应商操作员
+            - generic [ref=e62]: supplier
+          - button "仓储调度员 warehouse" [ref=e63] [cursor=pointer]:
+            - strong [ref=e64]: 仓储调度员
+            - generic [ref=e65]: warehouse
+          - button "采购处长 admin" [ref=e66] [cursor=pointer]:
+            - strong [ref=e67]: 采购处长
+            - generic [ref=e68]: admin

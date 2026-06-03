@@ -1,0 +1,96 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e199]:
+    - complementary [ref=e200]:
+      - button "SC 电商供应链一体化平台 寻源 · 采购 · 仓储协同" [ref=e201] [cursor=pointer]:
+        - generic [ref=e202]: SC
+        - generic [ref=e203]:
+          - strong [ref=e204]: 电商供应链一体化平台
+          - generic [ref=e205]: 寻源 · 采购 · 仓储协同
+      - menubar [ref=e209]:
+        - menuitem "工作台" [ref=e210] [cursor=pointer]:
+          - img [ref=e212]
+          - generic [ref=e216]: 工作台
+        - menuitem "寻源定点" [ref=e217] [cursor=pointer]:
+          - img [ref=e219]
+          - generic [ref=e222]: 寻源定点
+        - menuitem "商品库" [ref=e223] [cursor=pointer]:
+          - img [ref=e225]
+          - generic [ref=e227]: 商品库
+        - menuitem "仓储库存" [ref=e228] [cursor=pointer]:
+          - img [ref=e230]
+          - generic [ref=e234]: 仓储库存
+    - generic [ref=e235]:
+      - generic [ref=e236]:
+        - generic [ref=e237]:
+          - paragraph [ref=e238]: Spring Boot API / Vue3 Element Plus / MySQL 数据闭环
+          - heading "寻源定点" [level=2] [ref=e239]
+        - generic [ref=e240]:
+          - button "通知" [ref=e242] [cursor=pointer]:
+            - img [ref=e244]
+          - generic [ref=e249]: 品类工程师
+          - button "李明" [ref=e251] [cursor=pointer]:
+            - generic [ref=e252]: 李明
+      - main [ref=e253]:
+        - generic [ref=e254]:
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - paragraph [ref=e258]: 角色：品类工程师 / 寻源业务闭环
+              - heading "寻源定点工作区" [level=3] [ref=e259]
+              - paragraph [ref=e260]: 按需求文档串联 JS01 创建需求、JS02 审核发布 RFQ、JS05 报价、JS01 比价定点、JS03 最终审批。
+            - generic [ref=e261]:
+              - button "刷新" [ref=e262] [cursor=pointer]:
+                - img [ref=e264]
+                - generic [ref=e266]: 刷新
+              - button "创建寻源需求" [ref=e267] [cursor=pointer]:
+                - img [ref=e269]
+                - generic [ref=e271]: 创建寻源需求
+          - generic [ref=e274]:
+            - tablist [ref=e278]:
+              - tab "寻源需求" [selected] [ref=e280]
+              - tab "RFQ 公告" [ref=e281]
+              - tab "报价汇总" [ref=e282]
+              - tab "商务定点" [ref=e283]
+            - tabpanel "寻源需求" [ref=e285]:
+              - generic [ref=e287]:
+                - table [ref=e289]:
+                  - rowgroup [ref=e298]:
+                    - row "需求编号 采购品类 数量 规格/预算 截止时间 状态 操作" [ref=e299]:
+                      - columnheader "需求编号" [ref=e300]:
+                        - generic [ref=e301]: 需求编号
+                      - columnheader "采购品类" [ref=e302]:
+                        - generic [ref=e303]: 采购品类
+                      - columnheader "数量" [ref=e304]:
+                        - generic [ref=e305]: 数量
+                      - columnheader "规格/预算" [ref=e306]:
+                        - generic [ref=e307]: 规格/预算
+                      - columnheader "截止时间" [ref=e308]:
+                        - generic [ref=e309]: 截止时间
+                      - columnheader "状态" [ref=e310]:
+                        - generic [ref=e311]: 状态
+                      - columnheader "操作" [ref=e312]:
+                        - generic [ref=e313]: 操作
+                - generic [ref=e317]:
+                  - table:
+                    - rowgroup
+                  - generic [ref=e319]: 暂无寻源需求
+  - alert [ref=e321]:
+    - img [ref=e323]
+    - paragraph [ref=e325]: 后端服务异常，请检查 Spring Boot 控制台日志
+  - alert [ref=e326]:
+    - img [ref=e328]
+    - paragraph [ref=e330]: 后端服务异常，请检查 Spring Boot 控制台日志
+  - alert [ref=e331]:
+    - img [ref=e333]
+    - paragraph [ref=e335]: 后端服务异常，请检查 Spring Boot 控制台日志
+  - alert [ref=e336]:
+    - img [ref=e338]
+    - paragraph [ref=e340]: 后端服务异常，请检查 Spring Boot 控制台日志
+  - alert [ref=e341]:
+    - img [ref=e343]
+    - paragraph [ref=e345]: 后端服务异常，请检查 Spring Boot 控制台日志
+  - alert [ref=e346]:
+    - img [ref=e348]
+    - paragraph [ref=e350]: 后端服务异常，请检查 Spring Boot 控制台日志
+  - alert [ref=e351]:
+    - img [ref=e353]
+    - paragraph [ref=e355]: 后端服务异常，请检查 Spring Boot 控制台日志

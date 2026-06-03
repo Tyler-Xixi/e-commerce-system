@@ -1,0 +1,58 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: ecommerce-system
+  
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+    serialization:
+      write-dates-as-timestamps: false
+  
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/e_commerce_system?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+  
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  
+  data:
+    redis:
+      repositories:
+        enabled: false
+      host: localhost
+      port: 6379
+      password:
+      database: 0
+      timeout: 3000            # 连接超时时间
+      lettuce:
+        pool:
+          max-active: 8        # 最大活跃连接数
+          max-wait: -1         # 最大等待时间
+          max-idle: 8          # 最大空闲连接数
+          min-idle: 0          # 最小空闲连接数
+
+jwt:
+  secret: my-super-duper-long-secret-jwt-key-that-is-definitely-long-enough-for-any-hash-algorithm-please-work-now-thank-you-very-much
+  expiration: 86400000
+  header: Authorization

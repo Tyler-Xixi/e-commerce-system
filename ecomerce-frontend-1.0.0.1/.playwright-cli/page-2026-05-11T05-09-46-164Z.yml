@@ -1,0 +1,156 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - button "SC 电商供应链一体化平台 寻源 · 采购 · 仓储协同" [ref=e5] [cursor=pointer]:
+        - generic [ref=e6]: SC
+        - generic [ref=e7]:
+          - strong [ref=e8]: 电商供应链一体化平台
+          - generic [ref=e9]: 寻源 · 采购 · 仓储协同
+      - menubar [ref=e13]:
+        - menuitem "工作台" [ref=e14] [cursor=pointer]:
+          - img [ref=e16]
+          - generic [ref=e20]: 工作台
+        - menuitem "寻源定点" [ref=e21] [cursor=pointer]:
+          - img [ref=e23]
+          - generic [ref=e26]: 寻源定点
+        - menuitem "商品库" [ref=e27] [cursor=pointer]:
+          - img [ref=e29]
+          - generic [ref=e31]: 商品库
+        - menuitem "仓储库存" [ref=e32] [cursor=pointer]:
+          - img [ref=e34]
+          - generic [ref=e38]: 仓储库存
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: Spring Boot API / Vue3 Element Plus / MySQL 数据闭环
+          - heading "工作台" [level=2] [ref=e43]
+        - generic [ref=e44]:
+          - button "通知" [ref=e46] [cursor=pointer]:
+            - img [ref=e48]
+          - generic:
+            - generic: 品类工程师
+          - button "李明" [ref=e53] [cursor=pointer]:
+            - generic [ref=e54]: 李明
+      - main [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - paragraph [ref=e59]: 当前角色：品类工程师
+              - heading "发起寻源需求、发布 RFQ、汇总报价、生成商务定点单" [level=3] [ref=e60]
+              - paragraph [ref=e61]: 工作台按角色聚合待办、RFQ、报价和库存状态，避免不同岗位看到无关功能。
+            - generic [ref=e62]:
+              - button "创建寻源需求" [ref=e63] [cursor=pointer]:
+                - generic [ref=e64]: 创建寻源需求
+              - button "查看报价汇总" [ref=e65] [cursor=pointer]:
+                - generic [ref=e66]: 查看报价汇总
+              - button "生成商务定点" [ref=e67] [cursor=pointer]:
+                - generic [ref=e68]: 生成商务定点
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - paragraph [ref=e72]: 供应商总数
+                - strong [ref=e73]: 0家
+              - generic:
+                - generic: 准入与报价池
+            - generic [ref=e74]:
+              - generic [ref=e75]:
+                - paragraph [ref=e76]: 在线 RFQ
+                - strong [ref=e77]: 0单
+              - generic:
+                - generic: 可报价/审批
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - paragraph [ref=e80]: 库存预警
+                - strong [ref=e81]: 0项
+              - generic:
+                - generic: 低于阈值
+            - generic [ref=e82]:
+              - generic [ref=e83]:
+                - paragraph [ref=e84]: 待办事项
+                - strong [ref=e85]: 0条
+              - generic:
+                - generic: 品类工程师
+          - generic [ref=e86]:
+            - generic [ref=e88]:
+              - generic [ref=e89]:
+                - heading "完整寻源业务流程" [level=3] [ref=e90]
+                - paragraph [ref=e91]: 从品类需求到商务定点审批，再触发采购、入库、付款流程。
+              - button "进入寻源工作区" [ref=e92] [cursor=pointer]:
+                - generic [ref=e93]: 进入寻源工作区
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - text: "01"
+                - strong [ref=e97]: 创建寻源需求
+                - generic [ref=e98]: 品类工程师
+                - paragraph [ref=e99]: 填写品类、数量、预算和规格，提交给组长审核。
+              - generic [ref=e100]:
+                - text: "02"
+                - strong [ref=e101]: 审核并发布 RFQ
+                - generic [ref=e102]: 品类组长
+                - paragraph [ref=e103]: 审核需求合理性，通过后自动生成询价单。
+              - generic [ref=e104]:
+                - text: "03"
+                - strong [ref=e105]: 供应商报价
+                - generic [ref=e106]: 供应商操作员
+                - paragraph [ref=e107]: 供应商查看 RFQ 公告，仅提交并查看自己的报价。
+              - generic [ref=e108]:
+                - text: "04"
+                - strong [ref=e109]: 报价汇总定点
+                - generic [ref=e110]: 品类工程师
+                - paragraph [ref=e111]: 系统按单价排序，工程师选择最优供应商生成定点单。
+              - generic [ref=e112]:
+                - text: "05"
+                - strong [ref=e113]: 最终审批执行
+                - generic [ref=e114]: 采购处长
+                - paragraph [ref=e115]: 采购处长审批定点结果，通过后触发采购、付款、入库链路。
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - generic [ref=e119]:
+                - generic [ref=e120]:
+                  - heading "我的待办" [level=3] [ref=e121]
+                  - paragraph [ref=e122]: 来自后端 /api/sourcing/tasks/pending/101
+                - button "刷新" [ref=e123] [cursor=pointer]:
+                  - generic [ref=e124]: 刷新
+              - generic [ref=e127]:
+                - table [ref=e129]:
+                  - rowgroup [ref=e135]:
+                    - row "事项 类型 优先级 截止时间" [ref=e136]:
+                      - columnheader "事项" [ref=e137]:
+                        - generic [ref=e138]: 事项
+                      - columnheader "类型" [ref=e139]:
+                        - generic [ref=e140]: 类型
+                      - columnheader "优先级" [ref=e141]:
+                        - generic [ref=e142]: 优先级
+                      - columnheader "截止时间" [ref=e143]:
+                        - generic [ref=e144]: 截止时间
+                - generic [ref=e148]:
+                  - table:
+                    - rowgroup
+                  - generic [ref=e150]: 暂无待办
+            - generic [ref=e151]:
+              - generic [ref=e153]:
+                - heading "角色数据视图" [level=3] [ref=e154]
+                - paragraph [ref=e155]: 不同角色只暴露与职责相关的核心指标。
+              - generic [ref=e157]:
+                - generic [ref=e158]:
+                  - strong [ref=e159]: "0"
+                  - generic [ref=e160]: RFQ 总数
+                - generic [ref=e161]:
+                  - strong [ref=e162]: "0"
+                  - generic [ref=e163]: 报价记录
+                - generic [ref=e164]:
+                  - strong [ref=e165]: "0"
+                  - generic [ref=e166]: 商务定点单
+                - generic [ref=e167]:
+                  - strong [ref=e168]: "0"
+                  - generic [ref=e169]: 消息通知
+          - img [ref=e172]
+  - alert [ref=e174]:
+    - img [ref=e176]
+    - paragraph [ref=e178]: 后端服务异常，请检查 Spring Boot 控制台日志
+  - alert [ref=e179]:
+    - img [ref=e181]
+    - paragraph [ref=e183]: 后端服务异常，请检查 Spring Boot 控制台日志
+  - alert [ref=e184]:
+    - img [ref=e186]
+    - paragraph [ref=e188]: 工作台数据加载不完整，请确认后端和数据库已启动

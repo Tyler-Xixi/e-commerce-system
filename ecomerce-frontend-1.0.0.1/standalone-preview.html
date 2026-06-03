@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>电商供应链一体化平台预览</title>
+    <link rel="stylesheet" href="./node_modules/element-plus/dist/index.css" />
+    <style>
+      body {
+        margin: 0;
+        background: #f4f6f8;
+        color: #1f2937;
+        font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+      }
+      .shell {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 246px minmax(0, 1fr);
+      }
+      .aside {
+        border-right: 1px solid #d8dee8;
+        background: #fff;
+      }
+      .brand {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        padding: 18px 16px;
+        border-bottom: 1px solid #d8dee8;
+      }
+      .mark {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background: #17324d;
+        color: #fff;
+        font-weight: 800;
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: 16px;
+      }
+      .brand p,
+      .muted {
+        margin: 4px 0 0;
+        color: #667085;
+        font-size: 12px;
+      }
+      .main {
+        min-width: 0;
+      }
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        min-height: 68px;
+        padding: 0 22px;
+        border-bottom: 1px solid #d8dee8;
+        background: #fff;
+      }
+      .topbar h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+      .content {
+        display: grid;
+        gap: 16px;
+        padding: 22px;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .stat {
+        min-height: 112px;
+        padding: 18px;
+        border: 1px solid #d8dee8;
+        border-top: 4px solid #2364aa;
+        border-radius: 8px;
+        background: #fff;
+      }
+      .stat strong {
+        display: block;
+        margin-top: 10px;
+        font-size: 30px;
+      }
+      .module-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .module-card {
+        min-height: 116px;
+        padding: 14px;
+        border: 1px solid #d8dee8;
+        border-radius: 8px;
+        background: #fff;
+      }
+      .module-card h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+      }
+      .arch {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 14px;
+      }
+      .arch img {
+        width: 100%;
+        max-height: 320px;
+        object-fit: contain;
+      }
+      @media (max-width: 980px) {
+        .shell {
+          grid-template-columns: 1fr;
+        }
+        .stats,
+        .module-grid,
+        .arch {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./node_modules/vue/dist/vue.global.prod.js"></script>
+    <script src="./node_modules/element-plus/dist/index.full.js"></script>
+    <script>
+      const { createApp, ref } = Vue
+
+      createApp({
+        setup() {
+          const active = ref('工作台')
+          const menus = ['工作台', '寻源定点', '用户管理', '供应商管理', '商品管理', '订单管理', '仓储库存', '物流调度', '支付结算', '售后管理', '架构视图']
+          const stats = [
+            ['今日待办', '18 项', 'RFQ、库存、物流统一聚合'],
+            ['RFQ 审批中', '6 单', '平均响应 1.4h'],
+            ['库存预警', '9 SKU', 'Redis 热点库存缓存'],
+            ['订单履约率', '97.2%', '近 7 日 +2.1%'],
+          ]
+          const modules = [
+            ['用户管理模块', 'SysUser / Role / Permission', '/api/auth/users'],
+            ['供应商管理模块', 'Supplier / Quote / Award', '/api/suppliers'],
+            ['商品管理模块', 'Product / Category / OSS', '/api/products'],
+            ['订单管理模块', 'SalesOrder / PurchaseOrder', '/api/orders'],
+            ['仓储库存模块', 'Inventory / StockLog / Redis', '/api/inventory'],
+            ['物流调度模块', 'Logistics / Third API', '/api/logistics'],
+            ['支付结算模块', 'Payment / Settlement', '/api/payments'],
+            ['售后管理模块', 'AfterSaleTicket / Refund', '/api/aftersales'],
+          ]
+          const rfqs = [
+            { code: 'RFQ-202604-001', title: '智能分拣线备件询价', mode: '询比价', status: '已审批', deadline: '2026-04-28' },
+            { code: 'RFQ-202604-002', title: '环保包装耗材询价', mode: '询比价', status: '待审批', deadline: '2026-04-29' },
+            { code: 'RFQ-202604-003', title: '云仓 WMS 接口服务', mode: '单一来源', status: '草稿', deadline: '2026-04-30' },
+          ]
+          return { active, menus, stats, modules, rfqs }
+        },
+        template: `
+          <div class="shell">
+            <aside class="aside">
+              <div class="brand">
+                <div class="mark">SC</div>
+                <div>
+                  <h1>电商供应链一体化平台</h1>
+                  <p>Vue3 + Element Plus 预览</p>
+                </div>
+              </div>
+              <el-menu :default-active="active" @select="active = $event">
+                <el-menu-item v-for="item in menus" :key="item" :index="item">{{ item }}</el-menu-item>
+              </el-menu>
+            </aside>
+            <main class="main">
+              <header class="topbar">
+                <div>
+                  <p class="muted">SpringBoot MVC / Nginx / JPA / Redis / MySQL / OSS</p>
+                  <h2>{{ active }}</h2>
+                </div>
+                <el-tag effect="plain">平台管理员</el-tag>
+              </header>
+              <section class="content">
+                <div class="stats">
+                  <div class="stat" v-for="item in stats" :key="item[0]">
+                    <span class="muted">{{ item[0] }}</span>
+                    <strong>{{ item[1] }}</strong>
+                    <p class="muted">{{ item[2] }}</p>
+                  </div>
+                </div>
+                <el-card shadow="never">
+                  <template #header>
+                    <strong>业务模块</strong>
+                  </template>
+                  <div class="module-grid">
+                    <div class="module-card" v-for="item in modules" :key="item[0]">
+                      <h3>{{ item[0] }}</h3>
+                      <p class="muted">{{ item[1] }}</p>
+                      <el-tag effect="plain">{{ item[2] }}</el-tag>
+                    </div>
+                  </div>
+                </el-card>
+                <el-card shadow="never">
+                  <template #header>
+                    <strong>寻源 RFQ</strong>
+                  </template>
+                  <el-table :data="rfqs" border>
+                    <el-table-column prop="code" label="RFQ 编号" width="160"></el-table-column>
+                    <el-table-column prop="title" label="询价标题"></el-table-column>
+                    <el-table-column prop="mode" label="寻源方式"></el-table-column>
+                    <el-table-column prop="deadline" label="报价截止"></el-table-column>
+                    <el-table-column prop="status" label="状态">
+                      <template #default="{ row }">
+                        <el-tag effect="plain" :type="row.status === '已审批' ? 'success' : row.status === '待审批' ? 'warning' : 'info'">{{ row.status }}</el-tag>
+                      </template>
+                    </el-table-column>
+                  </el-table>
+                </el-card>
+                <el-card shadow="never">
+                  <template #header>
+                    <strong>架构图对照</strong>
+                  </template>
+                  <div class="arch">
+                    <img src="./public/final-architecture.png" alt="最终架构图">
+                    <img src="./public/system-architecture.png" alt="系统架构图">
+                  </div>
+                </el-card>
+              </section>
+            </main>
+          </div>
+        `,
+      }).use(ElementPlus).mount('#app')
+    </script>
+  </body>
+</html>
